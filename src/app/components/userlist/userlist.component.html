@@ -1,0 +1,32 @@
+
+
+
+<h2>User Detail</h2>
+<div class="card shadow-lg mx-auto btn-bg mt-3" style="width: 50%; border-radius: 15px;" *ngFor="let item of users">
+    <!-- Card Header -->
+    <div class="card-header d-flex justify-content-between align-items-center bg-primary text-white rounded-top">
+        <h5 class="mb-0">
+            <span class="fa fa-id-card pr-3"></span>User Details
+        </h5>
+    </div>
+
+    <!-- Card Body -->
+    <div class="card-body text-white">
+        <p class="lead mb-3">
+            <span class="fa fa-user pr-3"></span>First Name: {{item.user.firstName}}
+        </p>
+        <p class="lead mb-3">
+            <span class="fa fa-user pr-3"></span>Last Name: {{item.user.lastName}}
+        </p>
+        <p class="lead mb-3">
+            <span class="fa fa-envelope pr-3"></span>Email: {{item.user.email}}
+        </p>
+    </div>
+
+    <!-- Card Footer -->
+    <div class="card-footer d-flex justify-content-end bg-light rounded-bottom">
+        <button type="submit" class="btn btn-primary mx-1" [routerLink]="['/userdetail', item.user.userId]">
+            Edit
+        </button>
+    </div>
+</div>

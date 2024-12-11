@@ -1,0 +1,25 @@
+
+  <div *ngIf="user" class="container mt-4">
+    <!-- Row to make form responsive on different screen sizes -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <!-- Form container with border, rounded corners, shadow, and background color -->
+        <div class="border p-4 rounded-3 shadow-lg" style="border-radius: 15px; background-color: #d7dde4;">
+          <form (ngSubmit)="saveChanges()">
+            <div>
+              <div class="mb-3">
+                <label for="firstName" class="form-label">First Name</label>
+                <input id="firstName" class="form-control" [(ngModel)]="user.firstName" name="firstName" required />
+              </div>
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input id="lastName" class="form-control" [(ngModel)]="user.lastName" name="lastName" required />
+              </div>
+            </div>
+            <button class="btn btn-success mt-3" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
